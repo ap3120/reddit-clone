@@ -1,39 +1,121 @@
-.App {
-  text-align: center;
+:root{
+    --color-background: #dce4e4;
+    --color-nav: #fff;
+    --color-button: #057cd4;
+    --color-button-hover: #279ef6;
+    --color-search: #dce4e4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--color-background);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-nav);
+}
+nav input{
+    border: 1px solid #888;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+    padding: 0px 10px;
+    background-color: var(--color-search);
+}
+@media screen and (max-width: 500px){
+    nav input{
+        width: 170px;
+    }
+}
+nav input:focus{
+    border: 1px solid var(--color-button);
+    outline: none;
+}
+.image{
+    width: 75%;
+}
+.subreddit{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+.button-subreddit{
+    background-color: var(--color-button);
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+.button-subreddit:hover{
+    cursor: pointer;
+    background-color: var(--color-button-hover);
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    padding: 0 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.posts-container{
+    width: 65%;
 }
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.subreddits-container{
+    width: 35%;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+@media screen and (max-width: 1000px){
+    .home{
+        flex-direction: column;
+        align-items: center;
+    }
+    .posts-container, .subreddits-container{
+        width: 100%;
+    }
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+@media screen and (max-width: 700px){
+    .home{
+        padding: 0 10px;
+    }
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+.author {
+    color: #00d;
+}
+.post-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.button-comments{
+    font-size: 1.1em;
+    border: none;
+    background-color: #fff;
+}
+.button-comments:hover{
+    cursor: pointer;
+}
+.likes{
+    display: flex;
+    align-items: center;
+}
+.likes p{
+    margin-right: 10px;
+}
+.comment-container {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-background);
+    margin-bottom: 5px;
+    box-sizing: border-box;
 }
