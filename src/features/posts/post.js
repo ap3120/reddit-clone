@@ -1,7 +1,7 @@
-import {useState, useEffect} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import {Comment} from '../comments/Comment';
-import {selectFilteredPosts, fetchComments} from '../../app/redditSlice.js';
+import {fetchComments} from '../../app/redditSlice.js';
 import '../../App.css';
 import moment from 'moment';
 import {TfiComments} from 'react-icons/tfi';

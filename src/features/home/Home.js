@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {Post} from '../posts/post.js';
 import {Subreddit} from '../subreddits/Subreddits';

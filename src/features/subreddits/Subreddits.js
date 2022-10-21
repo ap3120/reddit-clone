@@ -10,7 +10,6 @@ export const Subreddit = (props) => {
         const url = subreddit.display_name_prefixed;
         dispatch(setSelectedSubreddit(url));
     }
-
     const imageStyle = {
         backgroundImage: 'url('+subreddit.header_img+')',
         width: '55px',
@@ -19,10 +18,11 @@ export const Subreddit = (props) => {
         backgroundSize: 'cover',
         borderRadius: '50%',
         backgroundColor: '#fff',
+        border: '1px solid'+subreddit.key_color,
     }
 
     return (
-        <div className='subreddit' style={{backgroundColor:subreddit.banner_background_color}}>
+        <div className='subreddit'>
             <div style={imageStyle}></div>
             <h5>{subreddit.display_name_prefixed}</h5>
             <button className='button-subreddit' onClick={handleClick}>Go!</button>

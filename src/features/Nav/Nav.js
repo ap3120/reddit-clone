@@ -1,8 +1,8 @@
-import {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import logo from '../../Reddit-logo.webp';
 import '../../App.css';
-import {setSearchTerm, selectSearchTerm} from '../../app/redditSlice.js';
+import {setSearchTerm} from '../../app/redditSlice.js';
 
 export const Nav = () => {
     const [term, setTerm] = useState('');

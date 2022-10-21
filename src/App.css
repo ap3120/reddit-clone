@@ -42,6 +42,8 @@ nav input:focus{
     align-items:center;
     justify-content: space-between;
     padding: 5px 20px;
+    background-color: #fff;
+    margin-bottom: 1px;
 }
 .button-subreddit{
     background-color: var(--color-button);
@@ -65,6 +67,7 @@ nav input:focus{
 }
 .subreddits-container{
     width: 35%;
+    margin-top: 10px;
 }
 @media screen and (max-width: 1000px){
     .home{
